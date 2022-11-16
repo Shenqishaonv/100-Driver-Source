@@ -10,9 +10,9 @@ torchvision = 0.11.2
 
 # Train a model
 ## 1. Prepare the data
-You can download the 100-Driver dataset from Google Drive or Baidu Yun.
+Download the 100-Driver dataset from Google Drive or Baidu Yun.
 
-Then modify the data and data splits path in the function get_dataloader() in utils.py
+Modify the data and data splits path in the function get_dataloader() in utils.py
 
 ## 2. Train
 
