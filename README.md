@@ -12,7 +12,7 @@ torchvision = 0.11.2
 ## 1. Prepare the data
 You can download the 100-Driver dataset from Google Drive or Baidu Yun.
 
-Then modify the path in the function get_dataloader() in utils.py
+Then modify the data and data splits path in the function get_dataloader() in utils.py
 
 ## 2. Train
 
@@ -25,3 +25,9 @@ If you have any questions, feel free to contact us through email (<wjli007@mail.
 
 # BibTex
 If you find this code or data useful, please consider citing our work.
+    
+    @InProceedings{100-Driver-2022,
+    author    = {Wang, Jing and Li, Wengjing and Li, Fang and Zhang, Jun and Wu, Zhongcheng and Zhong, Zhun and Sebe, Nicu},
+    title     = {100-Driver: A Large-scale, Diverse Dataset for Distracted Driver Classification},
+    booktitle = {Under Review},
+    year      = {2022}}
