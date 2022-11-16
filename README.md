@@ -12,7 +12,7 @@ torchvision = 0.11.2
 ## 1. Prepare the data
 You can download the 100-Driver dataset from Google Drive or Baidu Yun.
 
-Then modify the path in the function ** get_dataloader()** in utils.py
+Then modify the path in the function get_dataloader() in utils.py
 
 ## 2. Train
 
