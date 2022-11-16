@@ -14,3 +14,11 @@ Then modify the data path in the function get_dataloader() in utils.py
 ## Train
 
 Please refer the .sh file in the scripts folder.
+
+
+# Contact 
+
+If you have any questions, feel free to contact us through email (wjli007@mail.ustc.edu.cn). Enjoy!
+
+# BibTex
+If you find this code or data useful, please consider citing our work.
