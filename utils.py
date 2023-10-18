@@ -233,59 +233,27 @@ def get_dataloader(dataset):
         loader: the path of the train and val data
         loadertxt: the txt file from the train and val set
     """
-#day-driver          
-    if dataset == 'pic-day-all':
-        trainloader = './data/day/'
-        trainloadertxt = './data/day-all-list/train.txt'
-        valloader = './data/day/'
-        valloadertxt = './data/day-all-list/val.txt'
-    elif dataset == 'pic-day-cam1':
-        trainloader = './data/day/angle1_rgb'
-        trainloadertxt = './data/day-cam-list/cam1/train.txt'
-        valloader = './data/day/angle1_rgb'
-        valloadertxt = './data/day-cam-list/cam1/val.txt'
+#Traditional setting for Cam1,2,3,4; if other settings are required, just add it in another elif         
+    if dataset == 'pic-day-cam1':
+        trainloader = './data/100-driver/Day_RGB/Cam1'
+        trainloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam1/D1_train.txt'
+        valloader = './data/100-driver/Day_RGB/Cam1'
+        valloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam1/D1_val.txt'
     elif dataset == 'pic-day-cam2':
-        trainloader = './data/day/angle2_rgb'
-        trainloadertxt = './data/day-cam-list/cam2/train.txt'
-        valloader = './data/day/angle2_rgb'
-        valloadertxt = './data/day-cam-list/cam2/val.txt'
+        trainloader = './data/100-driver/Day_RGB/Cam2'
+        trainloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam2/D2_train.txt'
+        valloader = './data/100-driver/Day_RGB/Cam2'
+        valloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam2/D2_train.txt'
     elif dataset == 'pic-day-cam3':
-        trainloader = './data/day/angle3_rgb'
-        trainloadertxt = './data/day-cam-list/cam3/train.txt'
-        valloader = './data/day/angle3_rgb'
-        valloadertxt = './data/day-cam-list/cam3/val.txt'
+        trainloader = './data/100-driver/Day_RGB/Cam3'
+        trainloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam3/D3_train.txt'
+        valloader = './data/100-driver/Day_RGB/Cam3'
+        valloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam3/D3_val.txt'
     elif dataset == 'pic-day-cam4':
-        trainloader = './data/day/angle4_rgb'
-        trainloadertxt = './data/day-cam-list/cam4/train.txt'
-        valloader = './data/day/angle4_rgb'
-        valloadertxt = './data/day-cam-list/cam4/val.txt'
-#night-driver     
-    elif dataset == 'pic-night-all':
-        trainloader = './data/night'
-        trainloadertxt = './data/night-all-list/train.txt'
-        valloader = './data/night'
-        valloadertxt = './data/night-all-list/val.txt'
-    elif dataset == 'pic-night-cam1':
-        trainloader = './data/night/angle1_IR'
-        trainloadertxt = './data/night-cam-list/cam1/train.txt'
-        valloader = './data/night/angle1_IR'
-        valloadertxt = './data/night-cam-list/cam1/val.txt'
-    elif dataset == 'pic-night-cam2':
-        trainloader = './data/night/angle2_IR'
-        trainloadertxt = './data/night-cam-list/cam2/train.txt'
-        valloader = './data/night/angle2_IR'
-        valloadertxt = './data/night-cam-list/cam2/val.txt'
-    elif dataset == 'pic-night-cam3':
-        trainloader = './data/night/angle3_IR'
-        trainloadertxt = './data/night-cam-list/cam3/train.txt'
-        valloader = './data/night/angle3_IR'
-        valloadertxt = './data/night-cam-list/cam3/val.txt'
-    elif dataset == 'pic-night-cam4':
-        trainloader = './data/night/angle4_IR'
-        trainloadertxt = './data/night-cam-list/cam4/train.txt'
-        valloader = './data/night/angle4_IR'
-        valloadertxt = './data/night-cam-list/cam4/val.txt'
-
+        trainloader = './data/100-driver/Day_RGB/Cam4'
+        trainloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam4/D4_train.txt'
+        valloader = './data/100-driver/Day_RGB/Cam4'
+        valloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam4/D4_val.txt'
     else:
         print('the dataset is not available ')
     return trainloader, trainloadertxt, valloader, valloadertxt
