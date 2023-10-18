@@ -10,13 +10,15 @@ torchvision = 0.11.2
 
 # Train a model
 ## 1. Prepare the data
-Download the 100-Driver dataset from Google Drive or Baidu Yun.
+Download the 100-Driver dataset from [here](https://100-driver.github.io/).
 
-Modify the data and data splits path in the function get_dataloader() in utils.py
+Put the data in the ./data folder
+
+If you want to change the data and data splits path, please refer to the function get_dataloader() in utils.py
 
 ## 2. Train
 
-Please refer the .sh file in the scripts folder.
+Please refer to the .sh file in the scripts folder.
 
 
 # Contact 
@@ -25,9 +27,10 @@ If you have any questions, feel free to contact us through email (<wjli007@mail.
 
 # BibTex
 If you find this code or data useful, please consider citing our work.
-    
-    @InProceedings{100-Driver-2022,
+   
+    @article{100-Driver,
     author    = {Wang, Jing and Li, Wengjing and Li, Fang and Zhang, Jun and Wu, Zhongcheng and Zhong, Zhun and Sebe, Nicu},
     title     = {100-Driver: A Large-scale, Diverse Dataset for Distracted Driver Classification},
-    booktitle = {Under Review},
-    year      = {2022}}
+    journal={IEEE Transactions on Intelligent Transportation Systems},
+    year      = {2023}
+    publisher={IEEE}}
