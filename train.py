@@ -115,7 +115,7 @@ if __name__ == '__main__':
     parser.add_argument('-gpu', action='store_true', default=True, help='use gpu or not')
     parser.add_argument('-b', type=int, default=64, help='batch size for dataloader')
     parser.add_argument('-warm', type=int, default=2, help='warm up training phase')
-    parser.add_argument('-lr', type=float, default=0.1, help='initial learning rate')
+    parser.add_argument('-lr', type=float, default=0.01, help='initial learning rate')
     parser.add_argument('-resume', action='store_true', default=False, help='resume training')
     parser.add_argument('-pretrain', default=True, help='wether the pretrain model is used')
     parser.add_argument("-dataset", default='pic-day-cam1', type=str)
