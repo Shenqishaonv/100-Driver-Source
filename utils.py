@@ -236,24 +236,24 @@ def get_dataloader(dataset):
 #Traditional setting for Cam1,2,3,4; if other settings are required, just add it in another elif         
     if dataset == 'pic-day-cam1':
         trainloader = './data/100-driver/Day_RGB/Cam1'
-        trainloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam1/D1_train.txt'
+        trainloadertxt = './data-splits/Traditional-setting/Day/Cam1/D1_train.txt'
         valloader = './data/100-driver/Day_RGB/Cam1'
-        valloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam1/D1_val.txt'
+        valloadertxt = './data-splits/Traditional-setting/Day/Cam1/D1_val.txt'
     elif dataset == 'pic-day-cam2':
         trainloader = './data/100-driver/Day_RGB/Cam2'
-        trainloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam2/D2_train.txt'
+        trainloadertxt = './data-splits/Traditional-setting/Day/Cam2/D2_train.txt'
         valloader = './data/100-driver/Day_RGB/Cam2'
-        valloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam2/D2_train.txt'
+        valloadertxt = './data-splits/Traditional-setting/Day/Cam2/D2_train.txt'
     elif dataset == 'pic-day-cam3':
         trainloader = './data/100-driver/Day_RGB/Cam3'
-        trainloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam3/D3_train.txt'
+        trainloadertxt = './data-splits/Traditional-setting/Day/Cam3/D3_train.txt'
         valloader = './data/100-driver/Day_RGB/Cam3'
-        valloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam3/D3_val.txt'
+        valloadertxt = './data-splits/Traditional-setting/Day/Cam3/D3_val.txt'
     elif dataset == 'pic-day-cam4':
         trainloader = './data/100-driver/Day_RGB/Cam4'
-        trainloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam4/D4_train.txt'
+        trainloadertxt = './data-splits/Traditional-setting/Day/Cam4/D4_train.txt'
         valloader = './data/100-driver/Day_RGB/Cam4'
-        valloadertxt = './data/100-driver/splits/Traditional-setting/Day/Cam4/D4_val.txt'
+        valloadertxt = './data-splits/Traditional-setting/Day/Cam4/D4_val.txt'
     else:
         print('the dataset is not available ')
     return trainloader, trainloadertxt, valloader, valloadertxt
