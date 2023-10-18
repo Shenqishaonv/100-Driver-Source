@@ -31,7 +31,7 @@ def train(epoch):
     loss_train = 0.0
     acc_train = 0.0
     correct_prediction = 0.0
-    total = 0.0
+    # total = 0.0
     for batch_index, (images, labels) in enumerate(training_loader):
         if args.gpu:
             labels = labels.cuda()
@@ -45,7 +45,7 @@ def train(epoch):
         loss.backward()
         optimizer.step()
         correct_prediction += (predicted == labels).sum().item()
-        total += labels.size(0)
+        # total += labels.size(0)
         #####
         if epoch <= args.warm:
             warmup_scheduler.step()
@@ -59,9 +59,9 @@ def train(epoch):
             trained_samples=batch_index * args.b + len(images),
             total_samples=len(training_loader.dataset)
         ))
-    total_batch = len(training_loader)
-    train_loss = loss_train / total_batch
-    train_acc = correct_prediction / total
+    # total_batch = len(training_loader)
+    train_loss = loss_train /len(training_loader)
+    train_acc = correct_prediction / len(train_datasets)
 
     finish = time.time()
     print('epoch {} training time consumed: {:.2f}s'.format(epoch, finish - start))
@@ -72,7 +72,7 @@ def train(epoch):
         test_loss = 0.0 # cost function error
         correct = 0.0
     
-        for (images, labels) in val_loader:
+        for batch_idx, (images, labels) in enumerate(val_loader):
 
             if args.gpu:
                 images = images.cuda()
@@ -85,7 +85,7 @@ def train(epoch):
                 correct += preds.eq(labels).sum()
 
         finish = time.time()
-        test_loss = test_loss / len(val_datasets)
+        test_loss = test_loss / len(val_loader)
         test_acc = correct.float() / len(val_datasets)
    
         if args.gpu:
@@ -152,7 +152,7 @@ if __name__ == '__main__':
     trainloader, trainloadertxt, valloader, valloadertxt = get_dataloader(args.dataset)
     mean, std = get_mean_std(args.dataset)
     train_datasets = DataSet(trainloader, trainloadertxt, mean, std, flag ='train')#get data
-    val_datasets = DataSet(valloader, valloadertxt, mean, std, flag = 'train')#
+    val_datasets = DataSet(valloader, valloadertxt, mean, std, flag = 'val')#
     training_loader = get_training_dataloader(
         dataset = train_datasets,
         num_workers=4,
