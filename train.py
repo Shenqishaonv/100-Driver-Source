@@ -152,7 +152,7 @@ if __name__ == '__main__':
     trainloader, trainloadertxt, valloader, valloadertxt = get_dataloader(args.dataset)
     mean, std = get_mean_std(args.dataset)
     train_datasets = DataSet(trainloader, trainloadertxt, mean, std, flag ='train')#get data
-    val_datasets = DataSet(valloader, valloadertxt, mean, std, flag = 'val')#
+    val_datasets = DataSet(valloader, valloadertxt, mean, std, flag = 'train')#
     training_loader = get_training_dataloader(
         dataset = train_datasets,
         num_workers=4,
