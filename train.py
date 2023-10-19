@@ -149,7 +149,7 @@ if __name__ == '__main__':
         net = net.cuda()
 
 # prepare the data
-    trainloader, trainloadertxt, valloader, valloadertxt = get_dataloader(args.dataset)
+    trainloader, trainloadertxt, valloader, valloadertxt = get_train_split(args.dataset)
     mean, std = get_mean_std(args.dataset)
     train_datasets = DataSet(trainloader, trainloadertxt, mean, std, flag ='train')#get data
     val_datasets = DataSet(valloader, valloadertxt, mean, std, flag = 'val')#
