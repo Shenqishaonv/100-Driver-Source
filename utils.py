@@ -225,7 +225,7 @@ def get_test_dataloader(dataset, batch_size=16, num_workers=2, shuffle=True):
     return test_loader
 
 
-def get_dataloader(dataset):
+def get_train_split(dataset):
     """ return training dataloader
     Args:
         dataset: the name of the dataset
@@ -243,7 +243,7 @@ def get_dataloader(dataset):
         trainloader = './data/100-driver/Day_RGB/Cam2'
         trainloadertxt = './data-splits/Traditional-setting/Day/Cam2/D2_train.txt'
         valloader = './data/100-driver/Day_RGB/Cam2'
-        valloadertxt = './data-splits/Traditional-setting/Day/Cam2/D2_train.txt'
+        valloadertxt = './data-splits/Traditional-setting/Day/Cam2/D2_val.txt'
     elif dataset == 'pic-day-cam3':
         trainloader = './data/100-driver/Day_RGB/Cam3'
         trainloadertxt = './data-splits/Traditional-setting/Day/Cam3/D3_train.txt'
@@ -257,6 +257,31 @@ def get_dataloader(dataset):
     else:
         print('the dataset is not available ')
     return trainloader, trainloadertxt, valloader, valloadertxt
+
+def get_test_split(dataset):
+    """ return training dataloader
+    Args:
+        dataset: the name of the dataset
+    Returns:
+        loader: the path of the train and val data
+        loadertxt: the txt file from the train and val set
+    """
+#Traditional setting for Cam1,2,3,4; if other settings are required, just add it in another elif         
+    if dataset == 'pic-day-cam1':
+        testloader = './data/100-driver/Day_RGB/Cam1'
+        testloadertxt = './data-splits/Traditional-setting/Day/Cam1/D1_test.txt'
+    elif dataset == 'pic-day-cam2':
+        testloader = './data/100-driver/Day_RGB/Cam2'
+        testloadertxt = './data-splits/Traditional-setting/Day/Cam2/D2_test.txt'
+    elif dataset == 'pic-day-cam3':
+        testloader = './data/100-driver/Day_RGB/Cam3'
+        testloadertxt = './data-splits/Traditional-setting/Day/Cam3/D3_test.txt'
+    elif dataset == 'pic-day-cam4':
+        testloader = './data/100-driver/Day_RGB/Cam4'
+        testloadertxt = './data-splits/Traditional-setting/Day/Cam4/D4_test.txt'
+    else:
+        print('the dataset is not available ')
+    return testloader, testloadertxt
 
 def compute_mean_std(dataset):
     """compute the mean and std of the input dataset
