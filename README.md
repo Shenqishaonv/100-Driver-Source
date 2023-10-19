@@ -18,8 +18,11 @@ If you want to change the data and data splits path, please refer to the functio
 
 ## 2. Train
 
-Please refer to the .sh file in the scripts folder.
+Please refer to the train.sh file in the scripts folder.
 
+## 3. Test
+
+Please refer to the test.sh file in the scripts folder.
 
 # Contact 
 
